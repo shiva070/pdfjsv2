@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Other Section */ 
+        .other-section {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            display: none;
+        }
+        .pdf-iframe {
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+        .close-btn {
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 31px;
+            border-radius: 38px;
+            padding: 4px 14px;
+            border: 6px solid #004E9E;
+            color: #004E9E;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="information-button-area">
+        <button onclick="openPDf('workshops')"> PDF 1 </button>
+        <button onclick="openPDf('program')"> PDF 2 </button>
+        <button onclick="openPDf('faqs')"> PDF 3 </button>
+    </div>
+
+    <section id="other-section" class="other-section">
+        <iframe id="pdf-iframe" class="pdf-iframe" src="./assets/pdf/Workshop.pdf" frameborder="0" ></iframe>
+        <span id="ifream-close-btn" class="close-btn" onclick="closePdf()"><i class="fas fa-times"></i></span>
+    </section>
+
+    <script>
+        //Open Pdf
+            const openPDf = (pdfName) => {
+            const pdf = document.getElementById('pdf-iframe');
+                switch(pdfName) {
+                    case 'workshops':
+                        // pdf.src = "./assets/pdf/Workshop.pdf"
+                        pdf.src = './assets/scripts/pdfjs/web/viewer.html?file=https://legislative.gov.in/sites/default/files/dummy-pdf_2.pdf'
+                        break;
+                    case 'program':
+                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/Program.pdf"
+                        break;
+                    case 'faqs':
+                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/testpdf.pdf"
+                        break;
+                }
+                document.getElementById('other-section').style.display = 'block';
+            }
+
+    //Close PDF
+    const closePdf = () => {
+        document.getElementById('other-section').style.display = 'none';
+        document.getElementById('pdf-iframe').src = '';
+    }
+    </script>
+</body>
+</html>

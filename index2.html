@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Register</title>
+  <style>
+    .iframe-areaN{
+        height: -webkit-fill-available;
+        width: 100%;
+        display: none;
+    }
+
+    .temp{
+
+        display: block !important;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="information-button-area">
+        <button onclick="openPDf()">Play Video </button>
+    </div>
+
+    <div class="iframe-areaN">
+        <iframe id="iframeXD" style="position: absolute; width: 100%; height: 100%; overflow: hidden;" src="https://webfiles.digitalpfizer.com/abe-test1/_public/index.html"  ></iframe>
+    </div>
+
+    <script>
+
+const openPDf = () => {
+    alert( document.getElementById("iframeXD").contentWindow.document.querySelector('video'));
+   // iframe.contentWindow.document.getElementsByTagName('video')[0];
+   // elmnt.src = "https://static.videezy.com/system/resources/previews/000/051/299/original/DSC_1975.mp4";
+   // alert(elmnt.src)
+        return
+        temp.children[0].src = "https://static.videezy.com/system/resources/previews/000/051/299/original/DSC_1975.mp4";
+        temp.play().then();
+        var tt = document.querySelector("iframeXD");
+        tt.style.display = "block";
+    }
+    </script>
+</body>
+</html>

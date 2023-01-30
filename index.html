@@ -43,9 +43,12 @@
 <body>
     <div class="information-button-area">
         <button onclick="openPDf('workshops')"> test 1 </button>
-        <button onclick="openPDf('program')"> PDF  2 </button>
+        <!-- <button onclick="openPDf('program')"> PDF  2 </button> -->
         <button onclick="openPDf('test2')"> test 2 </button>
         <button onclick="openPDf('test3')"> test 3 </button> 
+        <button onclick="openPDf('test4')"> test 3 </button> 
+        <button onclick="openPDf('test5')"> test 3 </button> 
+        <button onclick="openPDf('test6')"> test 3 </button> 
        
     </div>
 
@@ -61,17 +64,27 @@
                 switch(pdfName) {
                     case 'workshops':
                         // pdf.src = "./assets/pdf/Workshop.pdf"
-                        pdf.src = './assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/t1.pdf'
+                        pdf.src = './assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/1.pdf'
                         break;
                     case 'program':
                         pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=https://shiva070.github.io/pdfjsv2/assets/pdf/Workshop.pdf"
                         break;
                     case 'test2':
-                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/t2.pdf"
+                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/2.pdf"
                         break;
                     case 'test3':
-                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/t3.pdf"
+                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/3.pdf"
                         break;
+                    case 'test4':
+                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/4.pdf"
+                        break;
+                    case 'test5':
+                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/5.pdf"
+                        break;
+                    case 'test6':
+                        pdf.src = "./assets/scripts/pdfjs/web/viewer.html?file=./../../../pdf/6.pdf"
+                        break;
+
 
                 }
                 document.getElementById('other-section').style.display = 'block';
